@@ -7,8 +7,8 @@ from flask import Flask
 from threading import Thread
 
 # --- AYARLAR (BURALARI KENDİ BİLGİLERİNLE DOLDUR) ---
-TELEGRAM_TOKEN = "TELEGRAM_BOT_TOKEN_BURAYA"
-GEMINI_API_KEY = "GEMINI_API_KEY_BURAYA"
+TELEGRAM_TOKEN = "8256760343:AAF4WtDfdkfd9PQbSud0ALitr65_aFlpZxw"
+GEMINI_API_KEY = "AIzaSyABH27p1wiH87x2b7vz1bjLGp97TzphRbM"
 
 # --- RENDER İÇİN SAHTE WEB SUNUCUSU (Keep Alive) ---
 app = Flask(__name__)
@@ -100,3 +100,4 @@ if __name__ == '__main__':
     
     print("Bot baslatiliyor...")
     application.run_polling()
+
