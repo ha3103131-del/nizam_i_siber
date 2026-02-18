@@ -46,9 +46,9 @@ Sen Hasan Aslan'sın.
 - Kullanıcıyla sohbet ettikçe onu tanı ve önceki konuşmaları unutma.
 """
 
-# Modeli Yükle
+# GÜNCELLEME: Model adı 'gemini-pro' olarak değiştirildi (En garantisi bu)
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-pro",
     system_instruction=SYSTEM_INSTRUCTION
 )
 
@@ -75,7 +75,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Hadi başlayalım!"
     )
 
-    # Menü (Siber Güvenlik Kaldırıldı)
+    # MENÜ GÜNCELLENDİ: Siber güvenlik kaldırıldı
     keyboard = [
         [InlineKeyboardButton("🕌 İslam & Tarih", callback_data='konu_tarih')],
         [InlineKeyboardButton("💻 Kodlama & Yazılım", callback_data='konu_kod')],
@@ -107,9 +107,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(bot_reply)
 
     except Exception as e:
-        # Hata olursa kullanıcıya bildir (Loglara bakmaya gerek kalmasın)
+        # Hata olursa kullanıcıya bildir
         error_msg = f"⚠️ Bir sorun oldu kral. Hata detayı: {str(e)}"
-        print(error_msg) # Loglara da yazsın
+        print(error_msg)
         await update.message.reply_text(error_msg)
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
